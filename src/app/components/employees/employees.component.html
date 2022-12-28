@@ -1,0 +1,29 @@
+  <div>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Total Hours</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let emp of employeesTotal">
+            <tr [ngClass]="emp.TotalTimeInMonth < 100 ? 'under-hundred-hours' : ''">
+              <td>{{emp.EmployeeName}}</td>
+              <td>{{emp.TotalTimeInMonth}}</td>
+              <td><a href="#">Edit</a></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <br/>
+    <div>
+      <canvasjs-chart id="chartContainer"></canvasjs-chart>    
+    </div>
+  </div>
+
+
+
